@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"></meta>
+		<meta name="description" content="District-1 Template"></meta>
+		<meta name="keywords" content="HTML,CSS,XML,JavaScript"></meta>
+		<meta name="author" content="Bill Aurnhammer"></meta>
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0 user-scalable=no"></meta>
+
+		<link href="./css/stylesheet.css" rel="stylesheet"></link>
+		<link rel="stylesheet" href="css/debug.css">
+		<script src="./js/jquery-2.1.4.min.js"></script>
+		<script src="./js/parse.min.js"></script>
+
+
+		<script src="./js/main.js"/></script>
+		<script src="./js/venueList.js"/></script>
+		<script src="./js/pstart.js"/></script>
+		<script src="./js/default.js"/></script>
+		<script src="./js/D1_debug.js"/></script>
+
+    </head>
+	<body>
+		<!-- debug -->
+		<button id="debug_button" onClick="DebugToggle(this)" >DBUG</button>
+		<div id="allresult"  onClick="DebugToggle(this)">
+			<button id='reset_button' onclick=resetState() resetTour()>RESET</button>
+			<div id="placeDB"></div>
+			<div id="gameDB"></div>
+			<div id="infoDB"></div>
+		</div>
+
+		<button id="event_button" >BEACON</button>
+
+		<div id="introPage"   class="flex-container appPage">
+			<div class="introHeader flex-item">
+				<img src="images/BCNameW.png">
+			</div>
+			<div class="introGraphic flex-item"></div>
+			<div class="introText flex-item">
+
+				<p> Find bars in downtown manhattan that are close to you.
+					Visit them all and be the most bar-goingest person!</p>
+				<p>Look for the bars that have the most users - the greener
+					the beacon, the more crawlers!</p>
+			</div>
+			<div class="footer">
+				<div class="button" onclick=startAdventure()>let's go!</div>
+			</div>
+
+		</div>
+
+
+		<div id="listPage" style="display: none;" class="flex-container appPage">
+			<div class="badgeHeader flex-item">
+				<div id="visitedBadge" >
+					<div id="visitCount">0</div>
+					<div class="visitLabel">visited</div>
+					</div>
+				<div id="title"> <img src="images/BCName.png"></div>
+				<div id="unvisitedBadge" >
+					<div id="unvisitCount">99</div>
+					<div class="visitLabel">unvisited</div>
+			</div>
+			</div>
+			<!--<div id="info" class="flex-item">vv</div> -->
+			<div id="venueList" class="flex-item"></div>
+			<div class="footer">
+			</div>
+		</div>
+
+		<div id="detailsPage" style="display: none;" class="flex-container appPage">
+			<div id="detailLogo" class="flex-item" ><img></div>
+			<div id="detailName" class="flex-item" >Name</div>
+			<div id="detailInfo" class="flex-item">
+			</div>
+			<div class="footer" class="flex-item" >
+				<button name="map-button" class="button"  >directions</button>
+
+				<div class="button" onclick=backToMain()>back</div>
+			</div>
+		</div>
+
+		<div id="welcomeAlert" style="display: none;" class="flex-container appPage">
+			<div id="welcomeLogo"><img></div>
+			<div id="welcomeInfo" class="flex-item">Welcome Info</div>
+			<div class="footer">
+				<div class="button" onclick=backToMain()>back</div>
+			</div>
+	</div>
+
+
+	</body>
+</html>
